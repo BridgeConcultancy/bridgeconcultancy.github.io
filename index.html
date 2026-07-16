@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bridge Consultancy — Your gateway to global markets and local success in Türkiye. Expert corporate & investment consultancy services based in Antalya.">
+    <meta name="keywords" content="corporate consultancy, investment consultancy, business setup Turkey, Antalya consultancy, FDI, company incorporation">
+    <meta name="author" content="Bridge Consultancy">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0F172A">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bridge Consultancy | Corporate & Investment Advisory">
+    <meta property="og:description" content="Your gateway to global markets and local success. End-to-end business establishment, advisory, and scaling in Türkiye.">
+    <meta property="og:locale" content="en_US">
+
+    <title>Bridge Consultancy | Corporate & Investment Advisory — Antalya, Türkiye</title>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v3 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0F172A',
+                            50: '#F8FAFC',
+                            100: '#F1F5F9',
+                            200: '#E2E8F0',
+                            300: '#CBD5E1',
+                            400: '#94A3B8',
+                            500: '#64748B',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1E293B',
+                            900: '#0F172A',
+                            950: '#020617',
+                        },
+                        accent: {
+                            DEFAULT: '#D97706',
+                            light: '#F59E0B',
+                            dark: '#B45309',
+                            50: '#FFFBEB',
+                        },
+                        emerald: {
+                            DEFAULT: '#059669',
+                            light: '#10B981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0F172A; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        /* Glassmorphism navbar */
+        .navbar-glass {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .navbar-top {
+            background: rgba(15, 23, 42, 0.98);
+        }
+
+        /* Animated underline for nav links */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #D97706, #F59E0B);
+            transition: width 0.3s ease;
+            border-radius: 1px;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero gradient overlay */
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.8) 40%, rgba(15,23,42,0.6) 100%);
+        }
+
+        /* Bento card glass */
+        .bento-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(217, 119, 6, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Service card */
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+        }
+        .service-card:hover .service-icon-wrap {
+            background: linear-gradient(135deg, #0F172A, #1E293B);
+            transform: scale(1.05);
+        }
+        .service-card:hover .service-icon-wrap svg {
+            color: #F59E0B;
+        }
+        .service-card:hover .learn-more {
+            color: #D97706;
+            gap: 12px;
+        }
+
+        /* Service icon container */
+        .service-icon-wrap {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Value card */
+        .value-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 60px -12px rgba(15,23,42,0.2);
+        }
+
+        /* Process step */
+        .process-step {
+            transition: all 0.4s ease;
+        }
+        .process-step:hover {
+            transform: translateY(-4px);
+        }
+        .process-step:hover .step-number {
+            background: linear-gradient(135deg, #D97706, #F59E0B);
+            color: white;
+            box-shadow: 0 8px 25px rgba(217, 119, 6, 0.4);
+        }
+
+        /* Animated counter */
+        .stat-number {
+            background: linear-gradient(135deg, #F59E0B, #D97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* CTA shimmer */
+        .cta-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-shimmer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Pulse glow */
+        .pulse-glow {
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(217, 119, 6, 0); }
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Subtle grid pattern */
+        .grid-pattern {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* Hero title underline animation */
+        @keyframes underlineGrow {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+        .animated-underline {
+            animation: underlineGrow 1.2s ease-out 0.5s forwards;
+        }
+
+        /* Footer gradient overlays */
+        .footer-glow {
+            background:
+                radial-gradient(circle at 20% 50%, rgba(217,119,6,0.06), transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(5,150,105,0.04), transparent 50%);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-navy-50 text-navy-900 antialiased">
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- HEADER / NAVIGATION                    -->
+    <!-- ═══════════════════════════════════════ -->
+
+    <!-- Top Bar -->
+    <div class="navbar-top text-white py-2.5 px-4 text-sm hidden sm:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <a href="https://linkedin.com/company/bridge-consultancy" class="flex items-center gap-1.5 hover:text-accent-light transition-colors duration-300" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
+                </a>
+                <a href="https://x.com/bridgeconsultancy" class="flex items-center gap-1.5 hover:text-accent-light transition-colors duration-300" aria-label="X / Twitter">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                </a>
+                <a href="https://instagram.com/bridge_consultancy" class="flex items-center gap-1.5 hover:text-accent-light transition-colors duration-300" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                </a>
+            </div>
+            <div class="flex items-center gap-6 text-navy-300">
+                <a href="mailto:info@bridgeconsultancy.com" class="flex items-center gap-2 hover:text-white transition-colors duration-300">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <span>info@bridgeconsultancy.com</span>
+                </a>
+                <a href="tel:+905001234567" class="flex items-center gap-2 hover:text-white transition-colors duration-300">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>+90 500 123 45 67</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav id="navbar" class="sticky top-0 z-50 navbar-glass transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group" id="logo">
+                    <div class="w-10 h-10 bg-gradient-to-br from-accent to-accent-light rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-accent/30 transition-all duration-300">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 20h20"></path>
+                            <path d="M5 20V8l7-5 7 5v12"></path>
+                            <path d="M9 20v-4h6v4"></path>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col leading-none">
+                        <span class="text-white font-bold text-lg tracking-wide">BRIDGE</span>
+                        <span class="text-accent-light text-[10px] font-semibold tracking-[0.3em] uppercase">Consultancy</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="nav-link text-navy-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300">Home</a>
+                    <a href="#why-us" class="nav-link text-navy-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300">Why Us</a>
+                    <a href="#services" class="nav-link text-navy-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300">Our Services</a>
+                    <a href="#process" class="nav-link text-navy-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300">Process</a>
+                    <a href="#contact" class="nav-link text-navy-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300">Contact</a>
+                </div>
+
+                <!-- CTA Button (Desktop) -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="#contact" class="cta-shimmer inline-flex items-center gap-2 bg-gradient-to-r from-accent to-accent-light text-white font-semibold text-sm px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-accent/25 transition-all duration-300 hover:-translate-y-0.5" id="schedule-call-btn">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        Schedule Call
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors" aria-label="Toggle menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 z-[60] bg-navy-900/98 backdrop-blur-xl flex flex-col">
+        <div class="flex justify-between items-center px-6 py-5">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-accent to-accent-light rounded-lg flex items-center justify-center">
+                    <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 20h20"></path><path d="M5 20V8l7-5 7 5v12"></path><path d="M9 20v-4h6v4"></path></svg>
+                </div>
+                <span class="text-white font-bold text-lg tracking-wide">BRIDGE</span>
+            </div>
+            <button id="mobile-menu-close" class="text-white p-2 hover:bg-white/10 rounded-lg transition-colors" aria-label="Close menu">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex-1 flex flex-col justify-center items-center gap-8">
+            <a href="#home" class="mobile-nav-link text-2xl text-white/80 hover:text-white font-semibold tracking-wide transition-colors">Home</a>
+            <a href="#why-us" class="mobile-nav-link text-2xl text-white/80 hover:text-white font-semibold tracking-wide transition-colors">Why Us</a>
+            <a href="#services" class="mobile-nav-link text-2xl text-white/80 hover:text-white font-semibold tracking-wide transition-colors">Our Services</a>
+            <a href="#process" class="mobile-nav-link text-2xl text-white/80 hover:text-white font-semibold tracking-wide transition-colors">Process</a>
+            <a href="#contact" class="mobile-nav-link text-2xl text-white/80 hover:text-white font-semibold tracking-wide transition-colors">Contact</a>
+            <a href="#contact" class="mt-4 cta-shimmer inline-flex items-center gap-2 bg-gradient-to-r from-accent to-accent-light text-white font-semibold px-8 py-3.5 rounded-lg">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+                Schedule Call
+            </a>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- HERO SECTION                           -->
+    <!-- ═══════════════════════════════════════ -->
+
+    <section id="home" class="relative min-h-[90vh] lg:min-h-screen bg-navy-900 overflow-hidden grid-pattern">
+        <!-- Abstract background elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-accent/8 via-transparent to-transparent rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-emerald/5 via-transparent to-transparent rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:py-0 lg:min-h-screen flex items-center">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
+
+                <!-- Left Column: Headline & CTAs -->
+                <div class="fade-in space-y-8">
+                    <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-navy-300">
+                        <span class="w-2 h-2 bg-emerald-light rounded-full animate-pulse"></span>
+                        Based in Antalya, Türkiye — Serving Globally
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
+                        Your Gateway to
+                        <span class="block mt-2">
+                            <span class="relative inline-block">
+                                Global Markets
+                                <span class="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-accent to-accent-light rounded-full animated-underline" style="width:0"></span>
+                            </span>
+                        </span>
+                        <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-accent-light via-accent to-accent-light">&amp; Local Success</span>
+                    </h1>
+
+                    <p class="text-lg lg:text-xl text-navy-400 leading-relaxed max-w-xl">
+                        End-to-end corporate advisory, business establishment, and investment scaling — trusted by international enterprises entering the Turkish market.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="cta-shimmer inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent to-accent-light text-white font-bold text-base px-8 py-4 rounded-xl hover:shadow-xl hover:shadow-accent/25 transition-all duration-300 hover:-translate-y-1" id="hero-cta-primary">
+                            Get Started
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#services" class="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white font-semibold text-base px-8 py-4 rounded-xl hover:bg-white/5 hover:border-white/40 transition-all duration-300" id="hero-cta-secondary">
+                            Explore Services
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Bento Grid Stats -->
+                <div class="fade-in grid grid-cols-2 gap-4" style="transition-delay: 0.2s;">
+                    <!-- Card 1 — Large -->
+                    <div class="bento-card col-span-2 rounded-2xl p-6 sm:p-8">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/5 rounded-xl flex items-center justify-center">
+                                <i data-lucide="trophy" class="w-6 h-6 text-accent-light"></i>
+                            </div>
+                            <div>
+                                <div class="text-3xl sm:text-4xl font-extrabold stat-number">15+</div>
+                                <div class="text-sm text-navy-400 font-medium">Years of Excellence</div>
+                            </div>
+                        </div>
+                        <p class="text-navy-400 text-sm leading-relaxed">Trusted by international enterprises since 2009 for seamless market entry and growth in Türkiye's dynamic economy.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bento-card rounded-2xl p-5 sm:p-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-emerald/20 to-emerald/5 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="trending-up" class="w-5 h-5 text-emerald-light"></i>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">$1B+</div>
+                        <div class="text-sm text-navy-400 font-medium">Project Volume</div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bento-card rounded-2xl p-5 sm:p-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-blue-500/5 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="globe" class="w-5 h-5 text-blue-400"></i>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">40+</div>
+                        <div class="text-sm text-navy-400 font-medium">Global Network</div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bento-card rounded-2xl p-5 sm:p-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-purple-500/20 to-purple-500/5 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="zap" class="w-5 h-5 text-purple-400"></i>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">64%</div>
+                        <div class="text-sm text-navy-400 font-medium">Faster Incorporation</div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="bento-card rounded-2xl p-5 sm:p-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-rose-500/20 to-rose-500/5 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="users" class="w-5 h-5 text-rose-400"></i>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">500+</div>
+                        <div class="text-sm text-navy-400 font-medium">Clients Served</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 text-navy-500">
+            <span class="text-xs tracking-widest uppercase">Scroll</span>
+            <div class="w-5 h-8 border-2 border-navy-600 rounded-full flex items-start justify-center pt-1.5">
+                <div class="w-1 h-2 bg-accent rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- WHY CHOOSE US                          -->
+    <!-- ═══════════════════════════════════════ -->
+
+    <section id="why-us" class="py-20 lg:py-28 bg-white relative overflow-hidden">
+        <!-- Subtle decorative elements -->
+        <div class="absolute top-0 right-0 w-72 h-72 bg-accent/3 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-navy-900/2 rounded-full blur-3xl"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                <div class="inline-flex items-center gap-2 bg-navy-900/5 rounded-full px-4 py-2 text-sm font-semibold text-navy-600 mb-6">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-accent"></i>
+                    Why Choose Us
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 mb-6 tracking-tight">
+                    Establish Your Business in
+                    <span class="relative inline-block">
+                        Türkiye
+                        <span class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-accent to-accent-light rounded-full"></span>
+                    </span>
+                </h2>
+                <p class="text-lg text-navy-500 leading-relaxed">
+                    Seize the strategic advantage by establishing your business in Türkiye. Unlock access to a myriad of markets across Europe, Asia, and the Middle East.
+                </p>
+            </div>
+
+            <!-- 3-Column Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="value-card bg-white rounded-2xl p-8 border border-navy-100 shadow-sm fade-in" id="value-card-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-navy-900 to-navy-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i data-lucide="compass" class="w-7 h-7 text-accent-light"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Strategic Guidance</h3>
+                    <p class="text-navy-500 leading-relaxed">
+                        Navigating complex local and international regulations with seasoned expertise. We chart the optimal course for your business expansion.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-navy-100">
+                        <div class="flex items-center gap-3 text-sm text-navy-400">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald"></i>
+                            <span>Regulatory compliance</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-navy-400 mt-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald"></i>
+                            <span>Risk assessment & mitigation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="value-card bg-white rounded-2xl p-8 border border-navy-100 shadow-sm fade-in" style="transition-delay: 0.1s;" id="value-card-2">
+                    <div class="w-14 h-14 bg-gradient-to-br from-navy-900 to-navy-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i data-lucide="network" class="w-7 h-7 text-accent-light"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Robust Local Network</h3>
+                    <p class="text-navy-500 leading-relaxed">
+                        Direct access to legal, governmental, and corporate ecosystems. Our deeply-rooted connections accelerate your time to market.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-navy-100">
+                        <div class="flex items-center gap-3 text-sm text-navy-400">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald"></i>
+                            <span>Government liaisons</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-navy-400 mt-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald"></i>
+                            <span>Legal & corporate partners</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="value-card bg-white rounded-2xl p-8 border border-navy-100 shadow-sm fade-in" style="transition-delay: 0.2s;" id="value-card-3">
+                    <div class="w-14 h-14 bg-gradient-to-br from-navy-900 to-navy-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i data-lucide="settings-2" class="w-7 h-7 text-accent-light"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Tailored Solutions</h3>
+                    <p class="text-navy-500 leading-relaxed">
+                        Customized end-to-end project management designed around your specific business objectives and market entry strategy.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-navy-100">
+                        <div class="flex items-center gap-3 text-sm text-navy-400">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald"></i>
+                            <span>Bespoke project plans</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-navy-400 mt-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald"></i>
+                            <span>Dedicated account managers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SERVICES GRID                          -->
+    <!-- ═══════════════════════════════════════ -->
+
+    <section id="services" class="py-20 lg:py-28 bg-navy-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                <div class="inline-flex items-center gap-2 bg-navy-900/5 rounded-full px-4 py-2 text-sm font-semibold text-navy-600 mb-6">
+                    <i data-lucide="briefcase" class="w-4 h-4 text-accent"></i>
+                    Our Services
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 mb-6 tracking-tight">
+                    Tailored Solutions for Every
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Business Need</span>
+                </h2>
+                <p class="text-lg text-navy-500 leading-relaxed">
+                    We specialize in offering comprehensive, end-to-end solutions to meet the unique needs of international businesses entering Türkiye.
+                </p>
+            </div>
+
+            <!-- 6-Card Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                <!-- Service 1: Business Incorporation -->
+                <div class="service-card bg-white rounded-2xl p-7 lg:p-8 border border-navy-100 shadow-sm flex flex-col justify-between fade-in" id="service-card-1">
+                    <div>
+                        <div class="service-icon-wrap w-14 h-14 bg-navy-50 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="building-2" class="w-7 h-7 text-navy-900"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Business Incorporation</h3>
+                        <p class="text-navy-500 leading-relaxed mb-6">
+                            Step-by-step company setup, legal registration, and statutory compliance. We handle the complexities so you can focus on growth.
+                        </p>
+                    </div>
+                    <a href="#contact" class="learn-more inline-flex items-center gap-2 text-sm font-semibold text-navy-600 hover:text-accent transition-all duration-300">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2: Government Relations & Incentives -->
+                <div class="service-card bg-white rounded-2xl p-7 lg:p-8 border border-navy-100 shadow-sm flex flex-col justify-between fade-in" style="transition-delay: 0.05s;" id="service-card-2">
+                    <div>
+                        <div class="service-icon-wrap w-14 h-14 bg-navy-50 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="landmark" class="w-7 h-7 text-navy-900"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Government Relations & Incentives</h3>
+                        <p class="text-navy-500 leading-relaxed mb-6">
+                            Accessing government funds, licenses, and beneficial regulations. We facilitate positive regulatory changes and incentive allocations.
+                        </p>
+                    </div>
+                    <a href="#contact" class="learn-more inline-flex items-center gap-2 text-sm font-semibold text-navy-600 hover:text-accent transition-all duration-300">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3: Legal & Compliance -->
+                <div class="service-card bg-white rounded-2xl p-7 lg:p-8 border border-navy-100 shadow-sm flex flex-col justify-between fade-in" style="transition-delay: 0.1s;" id="service-card-3">
+                    <div>
+                        <div class="service-icon-wrap w-14 h-14 bg-navy-50 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="scale" class="w-7 h-7 text-navy-900"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Legal & Compliance</h3>
+                        <p class="text-navy-500 leading-relaxed mb-6">
+                            Expert corporate legal advice, trade compliance, and regulatory navigation. Protecting your interests at every stage.
+                        </p>
+                    </div>
+                    <a href="#contact" class="learn-more inline-flex items-center gap-2 text-sm font-semibold text-navy-600 hover:text-accent transition-all duration-300">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4: Market Entry & Project Management -->
+                <div class="service-card bg-white rounded-2xl p-7 lg:p-8 border border-navy-100 shadow-sm flex flex-col justify-between fade-in" style="transition-delay: 0.15s;" id="service-card-4">
+                    <div>
+                        <div class="service-icon-wrap w-14 h-14 bg-navy-50 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="target" class="w-7 h-7 text-navy-900"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Market Entry & Project Management</h3>
+                        <p class="text-navy-500 leading-relaxed mb-6">
+                            Planning and executing market expansion from start to finish. We initiate, monitor, and close your projects with precision.
+                        </p>
+                    </div>
+                    <a href="#contact" class="learn-more inline-flex items-center gap-2 text-sm font-semibold text-navy-600 hover:text-accent transition-all duration-300">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5: Expo & Fair Representation -->
+                <div class="service-card bg-white rounded-2xl p-7 lg:p-8 border border-navy-100 shadow-sm flex flex-col justify-between fade-in" style="transition-delay: 0.2s;" id="service-card-5">
+                    <div>
+                        <div class="service-icon-wrap w-14 h-14 bg-navy-50 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="presentation" class="w-7 h-7 text-navy-900"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Expo & Fair Representation</h3>
+                        <p class="text-navy-500 leading-relaxed mb-6">
+                            Managing booth setups, local networking, and stakeholder engagement. Your presence, professionally represented.
+                        </p>
+                    </div>
+                    <a href="#contact" class="learn-more inline-flex items-center gap-2 text-sm font-semibold text-navy-600 hover:text-accent transition-all duration-300">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6: Import, Export & Logistics -->
+                <div class="service-card bg-white rounded-2xl p-7 lg:p-8 border border-navy-100 shadow-sm flex flex-col justify-between fade-in" style="transition-delay: 0.25s;" id="service-card-6">
+                    <div>
+                        <div class="service-icon-wrap w-14 h-14 bg-navy-50 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="ship" class="w-7 h-7 text-navy-900"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Import, Export & Logistics</h3>
+                        <p class="text-navy-500 leading-relaxed mb-6">
+                            Supply chain optimization, trade consulting, and shipping logistics. Streamlining your international trade operations.
+                        </p>
+                    </div>
+                    <a href="#contact" class="learn-more inline-flex items-center gap-2 text-sm font-semibold text-navy-600 hover:text-accent transition-all duration-300">
+                        Learn More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- PROCESS FLOW                           -->
+    <!-- ═══════════════════════════════════════ -->
+
+    <section id="process" class="py-20 lg:py-28 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-navy-200 to-transparent hidden lg:block"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                <div class="inline-flex items-center gap-2 bg-navy-900/5 rounded-full px-4 py-2 text-sm font-semibold text-navy-600 mb-6">
+                    <i data-lucide="workflow" class="w-4 h-4 text-accent"></i>
+                    Our Method
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 mb-6 tracking-tight">
+                    A Simple, Proven
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Approach</span>
+                </h2>
+                <p class="text-lg text-navy-500 leading-relaxed">
+                    Our streamlined three-phase methodology ensures clarity, speed, and measurable outcomes at every stage.
+                </p>
+            </div>
+
+            <!-- 3-Step Timeline -->
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Step 1 -->
+                <div class="process-step text-center fade-in" id="process-step-1">
+                    <div class="flex justify-center mb-8">
+                        <div class="step-number w-20 h-20 bg-navy-50 border-2 border-navy-200 rounded-3xl flex items-center justify-center transition-all duration-500">
+                            <span class="text-3xl font-extrabold text-navy-900">01</span>
+                        </div>
+                    </div>
+                    <div class="bg-navy-50/50 rounded-2xl p-8 border border-navy-100">
+                        <div class="w-12 h-12 bg-gradient-to-br from-navy-900 to-navy-700 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                            <i data-lucide="search" class="w-6 h-6 text-accent-light"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Discovery</h3>
+                        <p class="text-navy-500 leading-relaxed">
+                            We analyze your business goals, market landscape, and regulatory requirements to develop a deep understanding of your needs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step text-center fade-in" style="transition-delay: 0.15s;" id="process-step-2">
+                    <div class="flex justify-center mb-8">
+                        <div class="step-number w-20 h-20 bg-navy-50 border-2 border-navy-200 rounded-3xl flex items-center justify-center transition-all duration-500">
+                            <span class="text-3xl font-extrabold text-navy-900">02</span>
+                        </div>
+                    </div>
+                    <div class="bg-navy-50/50 rounded-2xl p-8 border border-navy-100">
+                        <div class="w-12 h-12 bg-gradient-to-br from-navy-900 to-navy-700 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                            <i data-lucide="lightbulb" class="w-6 h-6 text-accent-light"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Strategy</h3>
+                        <p class="text-navy-500 leading-relaxed">
+                            We craft a bespoke roadmap with clear milestones, risk assessments, and resource allocation tailored to your objectives.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step text-center fade-in" style="transition-delay: 0.3s;" id="process-step-3">
+                    <div class="flex justify-center mb-8">
+                        <div class="step-number w-20 h-20 bg-navy-50 border-2 border-navy-200 rounded-3xl flex items-center justify-center transition-all duration-500">
+                            <span class="text-3xl font-extrabold text-navy-900">03</span>
+                        </div>
+                    </div>
+                    <div class="bg-navy-50/50 rounded-2xl p-8 border border-navy-100">
+                        <div class="w-12 h-12 bg-gradient-to-br from-navy-900 to-navy-700 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                            <i data-lucide="rocket" class="w-6 h-6 text-accent-light"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Execution</h3>
+                        <p class="text-navy-500 leading-relaxed">
+                            We handle end-to-end implementation — from legal filings to operations — and deliver measurable results on schedule.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connector arrows (desktop only) -->
+            <div class="hidden lg:flex justify-center items-center mt-[-240px] mb-[160px] pointer-events-none">
+                <div class="w-full max-w-4xl flex justify-between px-24">
+                    <div class="flex items-center">
+                        <div class="w-24 h-px bg-gradient-to-r from-navy-300 to-accent"></div>
+                        <i data-lucide="chevron-right" class="w-5 h-5 text-accent -ml-1"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-24 h-px bg-gradient-to-r from-accent to-emerald"></div>
+                        <i data-lucide="chevron-right" class="w-5 h-5 text-emerald -ml-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- CTA BANNER                             -->
+    <!-- ═══════════════════════════════════════ -->
+
+    <section id="contact" class="relative py-20 lg:py-28 bg-navy-900 overflow-hidden grid-pattern">
+        <!-- Decorative glows -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-emerald/8 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-navy-300 mb-8">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-accent-light"></i>
+                    Let's Connect
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 tracking-tight">
+                    Ready to Expand Your Business?
+                    <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-accent-light to-accent">Let's Talk Today.</span>
+                </h2>
+
+                <p class="text-lg text-navy-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Schedule a free consultation with our expert team and discover how Bridge Consultancy can accelerate your market entry into Türkiye.
+                </p>
+
+                <!-- Contact Form / Email Input -->
+                <div class="max-w-lg mx-auto">
+                    <form class="flex flex-col sm:flex-row gap-3" id="contact-form" onsubmit="handleSubmit(event)">
+                        <input
+                            type="email"
+                            id="contact-email"
+                            placeholder="Enter your business email"
+                            required
+                            class="flex-1 px-5 py-4 bg-white/8 border border-white/15 rounded-xl text-white placeholder-navy-500 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-all duration-300 text-sm"
+                        >
+                        <button
+                            type="submit"
+                            class="cta-shimmer px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-bold rounded-xl hover:shadow-lg hover:shadow-accent/25 transition-all duration-300 hover:-translate-y-0.5 text-sm whitespace-nowrap"
+                            id="contact-submit-btn"
+                        >
+                            Get in Touch
+                        </button>
+                    </form>
+                    <p class="text-navy-600 text-xs mt-4">No spam — we'll respond within 24 hours with a personalized brief.</p>
+                </div>
+
+                <!-- Direct contact alternatives -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mt-10 pt-10 border-t border-white/10">
+                    <a href="tel:+905001234567" class="flex items-center gap-3 text-navy-300 hover:text-white transition-colors duration-300" id="contact-phone">
+                        <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center">
+                            <i data-lucide="phone" class="w-5 h-5 text-accent-light"></i>
+                        </div>
+                        <span class="font-medium">+90 500 123 45 67</span>
+                    </a>
+                    <a href="mailto:info@bridgeconsultancy.com" class="flex items-center gap-3 text-navy-300 hover:text-white transition-colors duration-300" id="contact-email-link">
+                        <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center">
+                            <i data-lucide="mail" class="w-5 h-5 text-accent-light"></i>
+                        </div>
+                        <span class="font-medium">info@bridgeconsultancy.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- FOOTER                                 -->
+    <!-- ═══════════════════════════════════════ -->
+
+    <footer class="bg-navy-950 relative" role="contentinfo">
+        <div class="footer-glow absolute inset-0"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+
+                <!-- Column 1: Company Info -->
+                <div class="space-y-6 sm:col-span-2 lg:col-span-1">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-accent to-accent-light rounded-lg flex items-center justify-center shadow-lg">
+                            <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 20h20"></path><path d="M5 20V8l7-5 7 5v12"></path><path d="M9 20v-4h6v4"></path></svg>
+                        </div>
+                        <div class="flex flex-col leading-none">
+                            <span class="text-white font-bold text-lg tracking-wide">BRIDGE</span>
+                            <span class="text-accent-light text-[10px] font-semibold tracking-[0.3em] uppercase">Consultancy</span>
+                        </div>
+                    </a>
+                    <p class="text-navy-400 leading-relaxed text-sm">
+                        Bridging Global Investments, Building Local Success. Your trusted partner for corporate & investment advisory in Türkiye.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://linkedin.com/company/bridge-consultancy" class="w-9 h-9 bg-white/5 hover:bg-accent/20 rounded-lg flex items-center justify-center text-navy-400 hover:text-accent-light transition-all duration-300" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
+                        </a>
+                        <a href="https://x.com/bridgeconsultancy" class="w-9 h-9 bg-white/5 hover:bg-accent/20 rounded-lg flex items-center justify-center text-navy-400 hover:text-accent-light transition-all duration-300" aria-label="X / Twitter">
+                            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                        </a>
+                        <a href="https://instagram.com/bridge_consultancy" class="w-9 h-9 bg-white/5 hover:bg-accent/20 rounded-lg flex items-center justify-center text-navy-400 hover:text-accent-light transition-all duration-300" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="text-sm font-bold text-white tracking-wider uppercase mb-6">Quick Links</h3>
+                    <ul class="space-y-3.5">
+                        <li><a href="#services" class="text-navy-400 hover:text-white text-sm transition-colors duration-300 flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-accent/50"></i>Our Services</a></li>
+                        <li><a href="#why-us" class="text-navy-400 hover:text-white text-sm transition-colors duration-300 flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-accent/50"></i>About Us</a></li>
+                        <li><a href="#process" class="text-navy-400 hover:text-white text-sm transition-colors duration-300 flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-accent/50"></i>Our Process</a></li>
+                        <li><a href="#" class="text-navy-400 hover:text-white text-sm transition-colors duration-300 flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-accent/50"></i>Blog</a></li>
+                        <li><a href="#" class="text-navy-400 hover:text-white text-sm transition-colors duration-300 flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-accent/50"></i>Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div>
+                    <h3 class="text-sm font-bold text-white tracking-wider uppercase mb-6">Contact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-navy-400 text-sm">
+                            <i data-lucide="users" class="w-4 h-4 text-accent-light/70 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <span class="text-white font-medium block">Founders</span>
+                                <span>Emine Eyler & Fatih Sertel</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-navy-400 text-sm">
+                            <i data-lucide="phone" class="w-4 h-4 text-accent-light/70 mt-0.5 flex-shrink-0"></i>
+                            <a href="tel:+905001234567" class="hover:text-white transition-colors">+90 500 123 45 67</a>
+                        </li>
+                        <li class="flex items-start gap-3 text-navy-400 text-sm">
+                            <i data-lucide="mail" class="w-4 h-4 text-accent-light/70 mt-0.5 flex-shrink-0"></i>
+                            <a href="mailto:info@bridgeconsultancy.com" class="hover:text-white transition-colors">info@bridgeconsultancy.com</a>
+                        </li>
+                        <li class="flex items-start gap-3 text-navy-400 text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-accent-light/70 mt-0.5 flex-shrink-0"></i>
+                            <span>Konyaaltı, Antalya<br>Türkiye</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div>
+                    <h3 class="text-sm font-bold text-white tracking-wider uppercase mb-6">Newsletter</h3>
+                    <p class="text-navy-400 text-sm mb-4 leading-relaxed">Subscribe for the latest insights on investment and business in Türkiye.</p>
+                    <form class="space-y-3" id="newsletter-form" onsubmit="handleNewsletter(event)">
+                        <input
+                            type="email"
+                            id="newsletter-email"
+                            placeholder="Your email"
+                            required
+                            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white text-sm placeholder-navy-500 focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent/40 transition-all duration-300"
+                        >
+                        <button
+                            type="submit"
+                            class="w-full px-4 py-3 bg-white hover:bg-navy-100 text-navy-900 font-semibold text-sm rounded-xl transition-all duration-300"
+                            id="newsletter-submit-btn"
+                        >
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="mt-16 pt-8 border-t border-white/8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-navy-500 text-sm">&copy; 2026 Bridge Consultancy. All rights reserved.</p>
+                <nav class="flex items-center gap-6" aria-label="Legal">
+                    <a href="#" class="text-navy-500 hover:text-white text-sm transition-colors duration-300">Privacy Policy</a>
+                    <a href="#" class="text-navy-500 hover:text-white text-sm transition-colors duration-300">Terms</a>
+                    <a href="#" class="text-navy-500 hover:text-white text-sm transition-colors duration-300">Cookies</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SCRIPTS                                -->
+    <!-- ═══════════════════════════════════════ -->
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // --- Mobile Menu ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        // Close mobile menu on nav link click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // --- Navbar scroll effect ---
+        const navbar = document.getElementById('navbar');
+        let lastScrollY = 0;
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > 80) {
+                navbar.classList.add('shadow-2xl');
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+            } else {
+                navbar.classList.remove('shadow-2xl');
+                navbar.style.background = 'rgba(15, 23, 42, 0.85)';
+            }
+            lastScrollY = currentScrollY;
+        });
+
+        // --- Fade-in on scroll (Intersection Observer) ---
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => fadeObserver.observe(el));
+
+        // --- Smooth scroll for anchor links ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // --- Active nav link highlight ---
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-white');
+                link.classList.add('text-navy-300');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.remove('text-navy-300');
+                    link.classList.add('text-white');
+                }
+            });
+        });
+
+        // --- Counter Animation ---
+        function animateCounter(element, target, suffix = '') {
+            const duration = 2000;
+            const start = 0;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const value = Math.floor(start + (target - start) * eased);
+
+                element.textContent = value + suffix;
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        // Observe stat numbers for counter animation
+        const statElements = document.querySelectorAll('.stat-number');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const text = entry.target.textContent;
+                    const match = text.match(/(\d+)(\D*)/);
+                    if (match) {
+                        const num = parseInt(match[1]);
+                        const suffix = text.replace(match[1], '');
+                        animateCounter(entry.target, num, suffix);
+                    }
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statElements.forEach(el => counterObserver.observe(el));
+
+        // --- Form handlers ---
+        function handleSubmit(e) {
+            e.preventDefault();
+            const email = document.getElementById('contact-email').value;
+            const btn = document.getElementById('contact-submit-btn');
+            btn.textContent = 'Sent! ✓';
+            btn.classList.add('bg-emerald', 'from-emerald', 'to-emerald-light');
+            setTimeout(() => {
+                btn.textContent = 'Get in Touch';
+                btn.classList.remove('bg-emerald', 'from-emerald', 'to-emerald-light');
+                document.getElementById('contact-email').value = '';
+            }, 3000);
+        }
+
+        function handleNewsletter(e) {
+            e.preventDefault();
+            const btn = document.getElementById('newsletter-submit-btn');
+            btn.textContent = 'Subscribed! ✓';
+            btn.classList.add('bg-emerald-light', 'text-white');
+            setTimeout(() => {
+                btn.textContent = 'Subscribe';
+                btn.classList.remove('bg-emerald-light', 'text-white');
+                document.getElementById('newsletter-email').value = '';
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
